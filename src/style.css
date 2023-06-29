@@ -1,0 +1,280 @@
+/* Google Fonts : Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*, *::after, *::before {
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* colors */
+:root {
+    --primary : #446Df6;
+    --success : #33CA7F;
+    --danger  : #E01541;
+    --dark    : #121614;
+    --light   : #A4B1AA;
+
+    --box-shadow : 3px 5px 8px 2px;
+    --transition : all 250ms ease-in-out ;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    color: var(--dark);
+}
+
+.modal__container{
+    position: fixed;
+    background-color:rgba(18, 22, 20, 0.2);
+    left: 0;
+    top: 0;
+    bottom: 0;right: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.note__body,
+.modal__body {
+  white-space: pre-wrap;
+}
+
+
+.modal {
+    max-width: 700px;
+    max-height: 80vh;
+    overflow: auto;
+    background-color: white;
+    border: 3px solid var(--dark);
+    padding: 2rem;
+    position: relative;
+}
+
+.modal__button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    /* bottom: auto; */
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    line-height: 2rem;
+    color: var(--dark);
+    font-size: 2rem;
+    border: 3px solid var(--dark);
+    border-radius: 50%;
+    background: white;
+    box-shadow: var(--box-shadow) rgba(18, 22, 20, 0.2);
+    transition: var(--transition);
+}
+
+.modal__button:focus {
+    outline: none;
+    border: 3px solid var(--light);
+    color: var(--light);
+    box-shadow: none;
+}
+
+.modal__button:hover {
+    outline: none;
+    border: 3px solid var(--light);
+    color: var(--light);
+    box-shadow: none;
+}
+
+.modal__title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 85%;
+}
+
+
+.form__container {
+    max-width: 1000px;
+    margin: 1rem auto;
+}
+
+.form__container h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.form__container h3 {
+    color: var(--success);
+    text-align: center;
+}
+
+.message {
+    margin: 1rem 0 1.5rem;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.message__success {
+    background-color: var(--success);
+    box-shadow: 2px 4px 7px 2px rgba(51, 202, 127,0.2);
+}
+
+.message__remove {
+    background-color: var(--primary);
+    box-shadow: 2px 4px 7px 2px rgba(var(--primary),0.2);
+}
+
+.message__alert {
+    background-color: var(--danger);
+    box-shadow: 2px 4px 7px 2px rgba(var(--danger),0.2);
+}
+
+form {
+    display: grid;
+    grid-gap: 1rem;
+    margin: 1rem 0;
+    width: 100%;    
+}
+
+
+label, input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+[for="title"], [for="note"] {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    grid-gap: 1rem;
+    background-color: rgba(164, 177, 170, 0.2);
+    font-weight: bold;
+}
+
+[for="title"] input {
+    flex: 1 1 80%;
+    border: 3px solid var(--light);
+    padding: 0.5rem;
+    color: var(--dark);
+    width: 100%;
+}
+
+[for="title"] input:focus{
+    outline: 2px solid var(--dark);
+}
+
+
+[for="note"] textarea {
+    flex: 1 1 80%;
+    border: 3px solid var(--light);
+    padding: 0.5rem;
+    color: var(--dark);
+    width: 100%;
+}
+
+[for="note"] textarea:focus{
+    outline: 2px solid var(--dark);
+}
+
+.form__button {
+    background-color: var(--success);
+    box-shadow: var(--box-shadow) rgba(51, 202, 127,0.2);
+    border: 3px solid transparent;
+    font-size: 1.3rem;
+    color: white;
+    padding: 0.5rem;
+    font-family: poppins, sans-serif;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.form__button:hover{
+    outline: none;
+    box-shadow: none;
+    border: 3px solid rgba(18, 22, 20, 0.5);
+}
+
+.form__button:focus{
+    outline: none;
+    box-shadow: none;
+    border: 3px solid rgba(18, 22, 20, 0.5);
+}
+
+.note__container {
+    margin: 2rem auto 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.note__card {
+    border: 3px solid rgba(68, 109, 246,0.2);
+    padding: 1.5rem;
+    transition: 250ms ease-out;
+}
+
+.note__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.note__body {
+    overflow: hidden;
+    max-height: 8rem;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp : 4;
+}
+
+.note__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+
+}
+
+.note__button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.note__button:hover {
+    box-shadow: none;
+}
+
+.note__button:focus{
+    box-shadow: none;
+}
+
+.note__buttonView{
+    background-color: var(--primary);
+    box-shadow: var(--box-shadow) rgba(68, 109, 246,0.2);
+    border: none;
+
+}
+
+.note__buttonDelete {
+    background-color: var(--danger);
+    box-shadow: var(--box-shadow) rgba(224, 21, 65,0.2);
+    border: none;
+}
+

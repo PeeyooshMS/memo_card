@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>メモカ | memo card</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <div class="modal__container" >
+      <div class="modal">
+        <button class="modal__button">&times;</button>
+        <h2 class="modal__title">Paper Portfolio</h2>
+        <p class="modal__body">
+          <strong>Key Learnings</strong> <br />
+          1. GSAP <br />
+          2. Locomotive Engine<br />
+          3. Infinite automatic scroll 
+        </p>
+      </div>
+    </div>
+    <div class="form__container">
+      <h1>メモカ | memo card</h1>
+      <h3>add a memo:</h3>
+      <!-- <div class="message message__alert">Its a error message</div> -->
+      <form>
+        <label for="title">
+          Title
+          <input type="text" id="title" placeholder="Enter a note" />
+        </label>
+
+        <label for="note"
+          >Note
+          <textarea
+            name="note"
+            id="note"
+            cols="30"
+            rows="10"
+            placeholder="Enter note text."
+          ></textarea>
+        </label>
+        <button type="submit" class="form__button">Submit</button>
+      </form>
+    </div>
+    <div class="note__container">
+      <!-- <div class="note__card">
+        <h2 class="note__title">amazon clone app</h2>
+        <p class="note__body">
+          <strong>Key Learnings</strong> <br />
+          1. React Components <br />
+          2. React Router Dom <br />
+          3. Context API <br />
+          4. Firebase Authentication
+        </p>
+        <div class="note__buttons">
+          <button class="note__button note__buttonView">view</button>
+          <button class="note__button note__buttonDelete">delete</button>
+        </div>
+      </div> -->
+      
+    </div>
+  </body>
+</html>

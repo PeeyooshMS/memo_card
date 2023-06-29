@@ -1,0 +1,12 @@
+--- Main ---
+Note Taker     :  Heading 
+Add a new note :  Sub Heading 
+Title          :  Form Element       
+Note           :  Form Element
+Submit         :  Button 
+
+--- Notes --- 
+Note Title 
+Note Body 
+View Button | Delete Button
+
